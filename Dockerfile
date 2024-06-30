@@ -1,8 +1,9 @@
 FROM maven:3.8.5-openjdk-17 AS build
-COPY . .
-RUN mvn clean package -DskipTests
-
-FROM openjdk:17.0.1-jdk-slim
-COPY --from=build /target/demo-0.0.1-SNAPSHOT.jar demo.jar
-EXPOSE 8080
-ENTRYPOINT ["java","-jar","demo.jar"]
+RUN echo 'Now started creating Image'
+MAINTAINER Anish Gupta<anishkumars.gupta@gmail.com>
+COPY target/blogsapp.jar  usr/app/blogsapp.jar
+WORKDIR usr/app/
+EXPOSE 9090
+RUN echo 'Started Executing Command'
+ENTRYPOINT ["java","-jar","blogsapp.jar","datasource=jdbc:mysql://mysqlcontainer:3306/blog_app?createDatabaseIfNotExist=true"]
+CMD echo 'Container Started'
