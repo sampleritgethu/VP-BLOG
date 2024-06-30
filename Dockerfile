@@ -1,6 +1,5 @@
 FROM maven:3.8.5-openjdk-17 AS build
 RUN echo 'Now started creating Image'
-MAINTAINER Anish Gupta<anishkumars.gupta@gmail.com>
 COPY target/blogsapp.jar  usr/app/blogsapp.jar
 WORKDIR usr/app/
 EXPOSE 9090
