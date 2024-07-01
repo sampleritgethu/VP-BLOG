@@ -16,7 +16,7 @@ COPY src ./src
 # Build the application
 RUN mvn package -DskipTests
 
-
+FROM openjdk:11.0.13-jre-slim
 
 # Set the working directory in the container
 WORKDIR /app
