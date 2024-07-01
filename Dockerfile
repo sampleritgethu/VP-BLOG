@@ -1,7 +1,7 @@
 FROM openjdk:11
 RUN echo 'Now started creating Image'
 MAINTAINER Anish Gupta<anishkumars.gupta@gmail.com>
-COPY target/blogsapp.jar  /app/blogsapp.jar
+COPY /absolute/path/to/target/blogsapp.jar  /app/blogsapp.jar
 WORKDIR /app/
 EXPOSE 9090
 RUN echo 'Started Executing Command'
