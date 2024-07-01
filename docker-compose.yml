@@ -20,7 +20,7 @@ services:
     networks:
       - springboot-db-net
     environment:
-      - MYSQL_ROOT_PASSWORD=Anish@123
+      - MYSQL_ROOT_PASSWORD=KODNEST123
       - MYSQL_DATABASE=blog_app
     volumes:
       - /data/mysql
