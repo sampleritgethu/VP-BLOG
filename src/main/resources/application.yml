@@ -5,9 +5,9 @@ spring:
     name: Blog App
     serverURL: http://localhost:9090/unlock?email=
   datasource:
-    url: jdbc:mysql://localhost:3306/blog_app?createDatabaseIfNotExist=true
+    url: jdbc:mysql://viaduct.proxy.rlwy.net:24060/blog_app?createDatabaseIfNotExist=true
     username: root
-    password: KODNEST123
+    password: uDQXktXHBMNSNUhIJWrBgqYZSijBYDFz
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
       maximum-pool-size: 50
